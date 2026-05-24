@@ -44,7 +44,7 @@ export const Navbar = () => {
                 
         <Disclosure>
           {({ open }) => (
-            <>
+            <div>
                 <Disclosure.Button
                   aria-label="Toggle Menu"
                   className="px-2 py-1 text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700">
@@ -80,7 +80,7 @@ export const Navbar = () => {
                     </Link>
                   </>
                 </Disclosure.Panel>
-            </>
+            </div>
           )}
         </Disclosure>
         
