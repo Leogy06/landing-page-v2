@@ -4,5 +4,5 @@ import { HERO_QUERY } from ".";
 import { client } from "../client";
 
 export async function getHero() {
-  return client.fetch(HERO_QUERY, {}, { cache: "no-store" });
+  return client.fetch(HERO_QUERY, {}, { next: { revalidate: 60 } }); // ✅ add this
 }
