@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getHero } from "@/lib/sanity/queries/hero";
-
+import { urlFor } from "@/utils/sanity/sanityImage";
 export const Hero = async () => {
   const hero = await getHero();
 
@@ -11,14 +11,14 @@ export const Hero = async () => {
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/img/hero.jpg"
+            src={urlFor("/img/hero.jpg").width(1200).url()}
             alt="Venue"
             fill
             priority
             className="object-cover object-center"
           />
           {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-main/60 via-black/40 to-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-stone-900 via-black/40 to-black/70" />
         </div>
 
         {/* Content */}
