@@ -11,7 +11,7 @@ export const Hero = async () => {
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src={urlFor("/img/hero.jpg").width(1200).url()}
+            src={urlFor(hero.image).width(1200).url()}
             alt="Venue"
             fill
             priority
